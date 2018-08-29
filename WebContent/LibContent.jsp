@@ -19,7 +19,7 @@
 
 	<%
 	
-	ArrayList<Photo> listPhoto = new ArrayList<Photo>();
+	
 	
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://localhost:3306/";
@@ -27,18 +27,14 @@
 		String userId = "root";
 		String password = "root";
 
-		try {
-			Class.forName(driverName);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		
 
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
 	%>
 	<h2 align="center">
-		<font color="#4d4dff"><strong>Photos in my library printed directly from the db</strong></font>
+		<font color="#4d4dff"><strong>Photo details in my library printed directly from the db</strong></font>
 	</h2>
 	<table align="center" cellpadding="4" cellspacing="4">
 		<tr>
@@ -57,6 +53,8 @@
 				String sql = "SELECT * FROM PhotoLib.info;";
 
 				resultSet = statement.executeQuery(sql);
+				
+				
 				while (resultSet.next()) {
 							%>
 							<tr bgcolor="#8FBC8F">
@@ -77,49 +75,6 @@
 		%>
 	</table>
 	
-	<h2 align="center">
-		<font color="#4d4dff"><strong>Photos in my library printed from my arrayList</strong></font>
-	</h2>
 	
-	<%
-	while (result.next()){
-		Photo objetPhoto = new Photo();
-		objetPhoto.setStyle(result.getString("Style"));
-		objetPhoto.setDimension(result.getString("Dimension"));
-		objetPhoto.setColor(result.getString("Color"));
-		objetPhoto.setDate(result.getDate("Date"));
-		
-		listPhoto.add(objetPhoto);
-		
-	}
-	
-
-	
-	
-	out.println("<ul>");
-	for (int i=0; i<listPhoto.size(); i++)
-          {
-		
-			  out.println("<li>");
-			  out.println("<strong>");
-              out.print(listPhoto.get(i).getStyle()+" ");
-              out.println("</strong>");
-              out.print(", de ");
-              out.println("<em>");
-              out.print(listPhoto.get(i).getDimension()+" ");
-              out.println("</em>");
-              out.print(" - ");
-              out.println(listPhoto.get(i).getColor()+" ");
-              out.print(" - ");
-              out.println(listPhoto.get(i).getDate()+" ");
-              out.print(".");
-              out.print("</li>");
-              out.println("<br />");
-          } 
-	out.println("</ul>");%>
-	
-	
-	
-	%>
 </body>
 </html>
