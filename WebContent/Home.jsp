@@ -14,10 +14,7 @@
 	<jsp:include page="Header.html"></jsp:include>
 	<HR>
 
-	<CENTER>
-		<IMG SRC="images/fox.png" width="200" height="150" ALIGN="BOTTOM">
-	</CENTER>
-	<HR>
+	
 	
 	
 	<jsp:include page="LibContent.jsp"></jsp:include>

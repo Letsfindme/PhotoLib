@@ -39,12 +39,13 @@
 	<table align="center" cellpadding="4" cellspacing="4">
 		<tr>
 
+
 		</tr>
 		<tr bgcolor="#008000">
-			<td><b>Name</b></td>
-			<td><b>Book ID</b></td>
-			<td><b>Year</b></td>
-			<td><b>Year</b></td>
+			<td><b>Style</b></td>
+			<td><b>Dimension</b></td>
+			<td><b>Color</b></td>
+			<td><b>Date</b></td>
 		</tr>
 		<%
 			try {

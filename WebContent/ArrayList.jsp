@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@page import="java.sql.DriverManager"%>
+	pageEncoding="UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
@@ -18,13 +18,14 @@
 	<HR>
 	<jsp:include page="Header.html"></jsp:include>
 	<HR>
-<div style="clear: both;"></div>
-
+	<div style="clear: both;"></div>
 	<HR>
-	<h2 align="center">
-		<font color="#4d4dff"><strong>Photo details in my library printed from my arrayList</strong></font>
-	</h2>
 	
+	<h2 align="center">
+		<font color="#4d4dff"><strong>Photo details in my
+				library printed from my arrayList</strong></font>
+	</h2>
+
 	<%
 	ArrayList<Photo> listPhoto = new ArrayList<Photo>();
 	
