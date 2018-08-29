@@ -20,7 +20,6 @@
 	<HR>
 	<div style="clear: both;"></div>
 	<HR>
-	
 	<h2 align="center">
 		<font color="#4d4dff"><strong>Photo details in my
 				library printed from my arrayList</strong></font>
@@ -80,6 +79,9 @@
               out.print(listPhoto.get(i).getDimension()+" ");
               out.println("</em>");
               out.println(listPhoto.get(i).getColor()+" ");
+              out.println("<em>");
+              out.print(listPhoto.get(i).getDate()+" ");
+              out.println("</em>");
               out.print("</li>");
               out.println("<br />");
           } 
